@@ -15,7 +15,7 @@ Discrete-time Python simulator evaluating average packet delay,throughput,and pa
  | 0.9 |     19.83     |2.002 | 0.7220|
  | 1.0 |     19.98     |2.001 | 0.7498|
 ### 1. Average Packet Delay
-![Average Delay](plots/AverageDelay.png) ≥ ≤
+![Average Delay](plots/AverageDelay.png)
 
 * **Low Load (p=0.1):** Average delay starts low at `2.82` slots , as station
 queues remain mostly empty and wavelength collisions rarely occur.
@@ -33,7 +33,7 @@ per wavelength.We have 4 wavelengths so the `maximum Throughput across the netwo
 
 
 ### 3. Packet Loss Rate
-![Packet Loss Rate](plots/Packet Loss Rate.png)
+![Packet Loss Rate](plots/PacketLossRate.png)
 * **Low Load (`p ≤ 0.2`):** Packet loss is negligible (`0.0001` at `p = 0.1` and `0.0182` at `p = 0.2`), because the per-station arrival rate remains below the maximum service capacity of `0.25` packets/slot.
 * **Congestion (`p > 0.25`):** Once `p` exceeds `0.25`, the finite 5-packet buffers overflow frequently. The loss rate climbs rapidly to `0.4997` (~50%) at `p = 0.5` and peaks at `0.7498` (~75%) at `p = 1.0`.
 At `p = 1.0`, 8 packets arrive across the network every slot, an average of 2 are successfully transmitted, and the remaining 6 are dropped, matching the theoretical limit of `6 / 8 = 0.75`.
